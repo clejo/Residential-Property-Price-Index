@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Real Estate Analysis</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+	<div class="container mt-2">
+		<div class="row">
+			<div class="col-12">
+				<div class="jumbotron">
+					<h1 class="text-center">Predict Real Estate Prices Evolution</h1>
+					<p class="text-center">Choose a country and start your property price analysis.</p>
+					<div class="row justify-content-center">
+						<table width="85%" border="0" cellpadding="15pt" align="center">
+							<form action="/selection" method="POST">
+								<tbody>
+									<tr>
+										<td>
+											<h5> Country Selection </h5>
+											<select name="select country">
+												<option value="null">--Select country--</option>
+												<option value="AUT">Austria</option>
+												<option value="BEL">Belgium</option>
+												<option value="CZE">Czech Republic</option>
+												<option value="DNK">Denmark</option>
+												<option value="FIN">Finland</option>
+												<option value="FRA">France</option>
+												<option value="DEU">Germany</option>
+												<option value="HUN">Hungary</option>
+												<option value="ISL">Iceland</option>
+												<option value="IRL">Ireland</option>
+												<option value="ITA">Italy</option>
+												<option value="JPN">Japan</option>
+												<option value="LUX">Luxembourg</option>
+												<option value="MEX">Mexico</option>
+												<option value="NLD">Netherlands</option>
+												<option value="NZL">New Zealand</option>
+												<option value="POL">Poland</option>
+												<option value="PRT">Portugal</option>
+												<option value="SVK">Slovak Republic</option>
+												<option value="ESP">Spain</option>
+												<option value="SWE">Sweden</option>
+												<option value="TUR">Turkey</option>
+												<option value="GBR">United Kingdom</option>
+												<option value="CHL">Chile</option>
+												<option value="EST">Estonia</option>
+												<option value="SVN">Slovenia</option>
+												<option value="LVA">Latvia</option>
+												<option value="LTU">Lithuania</option>
+											</select>
+										</td>
+										<td>
+											<h5> Factors Selection </h5>
+											<p> Select factor 1&nbsp;&nbsp;<select name="select factor1">
+													<option value="null">--Select factor--</option>
+													<option value="GDPV">Gross Domestic Product</option>
+													<option value="IHV">Gross Fixed Capital Formation</option>
+													<option value="ET_ANNPCT">Total Employment</option>
+													<option value="CPI">Consumer Price Index</option>
+													<option value="UNR">Unemployment Rate</option>
+													<option value="IRL">Long-term Interest Rate</option>
+													<option value="GDPV_CAP">GDP per Capita</option>
+												</select></p>
+											<p> Select factor 2&nbsp;&nbsp;<select name="select factor2">
+													<option value="null">--Select factor--</option>
+													<option value="GDPV">Gross Domestic Product</option>
+													<option value="IHV">Gross Fixed Capital Formation</option>
+													<option value="ET_ANNPCT">Total Employment</option>
+													<option value="CPI">Consumer Price Index</option>
+													<option value="UNR">Unemployment Rate</option>
+													<option value="IRL">Long-term Interest Rate</option>
+													<option value="GDPV_CAP">GDP per Capita</option>
+												</select></p>
+											<p> Select factor 3&nbsp;&nbsp;<select name="select factor3">
+													<option value="null">--Select factor--</option>
+													<option value="GDPV">Gross Domestic Product</option>
+													<option value="IHV">Gross Fixed Capital Formation</option>
+													<option value="ET_ANNPCT">Total Employment</option>
+													<option value="CPI">Consumer Price Index</option>
+													<option value="UNR">Unemployment Rate</option>
+													<option value="IRL">Long-term Interest Rate</option>
+													<option value="GDPV_CAP">GDP per Capita</option>
+												</select></p>
+										</td>
+										<td>
+											<h5> Time Span </h5>
+											<p> Select start year&nbsp;&nbsp;<select name="start year">
+													<option value="null">--Start year--</option>
+													<option value=2000>2000</option>
+													<option value=2001>2001</option>
+													<option value=2002>2002</option>
+													<option value=2003>2003</option>
+													<option value=2004>2004</option>
+													<option value=2005>2005</option>
+													<option value=2006>2006</option>
+													<option value=2007>2007</option>
+													<option value=2008>2008</option>
+													<option value=2009>2009</option>
+													<option value=2010>2010</option>
+													<option value=2011>2011</option>
+													<option value=2012>2012</option>
+													<option value=2013>2013</option>
+													<option value=2014>2014</option>
+													<option value=2015>2015</option>
+													<option value=2016>2016</option>
+													<option value=2017>2017</option>
+													<option value=2018>2018</option>
+												</select></p>
+											<p> Select end year&nbsp;&nbsp;&nbsp;&nbsp;<select name="end year">
+													<option value="null">--End year--</option>
+													<option value=2000>2000</option>
+													<option value=2001>2001</option>
+													<option value=2002>2002</option>
+													<option value=2003>2003</option>
+													<option value=2004>2004</option>
+													<option value=2005>2005</option>
+													<option value=2006>2006</option>
+													<option value=2007>2007</option>
+													<option value=2008>2008</option>
+													<option value=2009>2009</option>
+													<option value=2010>2010</option>
+													<option value=2011>2011</option>
+													<option value=2012>2012</option>
+													<option value=2013>2013</option>
+													<option value=2014>2014</option>
+													<option value=2015>2015</option>
+													<option value=2016>2016</option>
+													<option value=2017>2017</option>
+													<option value=2018>2018</option>
+												</select></p>
+										</td>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3" align="center">
+											<input type="submit" value="Send Request">
+										</td>
+									</tr>
+								</tbody>
+							</form>
+						</table>
+
+						<div style="width:90%" class="results">
+							<br />
+							<h4> &nbsp;&nbsp;&nbsp;&nbsp;Result area: </h4>
+							<div class="result presentation">
+								{{ results.line0 }}<br>
+								{{ results.line1 }}<br>
+								{{ results.line2 }}<br>
+								{{ results.line3 }}<br>
+								{{ results.line4 }}<br>
+								{{ results.line5 }}<br>
+								{{ results.line6 }}<br>
+								{{ results.line7 }}<br>
+							</div>
+							<div class="graph presentation">
+								<img src="{%if plot_possible %} /static/img/plot.png {% endif %}"  alt="" class="img-fluid">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<p style=font-size:10pt>Programmed by Clément JOSSET, Daihao PENG, Sylvain DELACOURT, Hong SHI</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+</body>
+
+</html>

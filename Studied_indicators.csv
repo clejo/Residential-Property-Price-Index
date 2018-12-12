@@ -1,0 +1,8 @@
+,VARIABLE,Variable
+325,GDPV,"Gross domestic product, volume, market prices"
+390,IHV,"Gross fixed capital formation, housing, volume"
+585,ET_ANNPCT,"Total employment, growth"
+715,CPI,Consumer price index
+793,UNR,Unemployment rate
+871,IRL,Long-term interest rate on government bonds
+40100,GDPV_CAP,"Gross domestic product per capita, volume"

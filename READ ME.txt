@@ -1,0 +1,44 @@
+Sources :
+Residential Property Price Indices :  https://stats.oecd.org/viewhtml.aspx?datasetcode=RPPI&lang=en     
+Macroeconomic variables: https://stats.oecd.org/viewhtml.aspx?datasetcode=EO104_INTERNET&lang=en
+
+VARIABLE    Variable
+GDPV    Gross domestic product, volume, market prices
+IHV     Gross fixed capital formation, housing, volume
+ET_ANNPCT      Total employment, growth
+CPI     Consumer price index
+UNR     Unemployment rate
+IRL     Long-term interest rate on government bonds
+GDPV_CAP       Gross domestic product per capita, volume
+
+
+      LOCATION          Country
+897        AUT          Austria
+1794       BEL          Belgium
+3601       CZE   Czech Republic
+4498       DNK          Denmark
+5408       FIN          Finland
+6318       FRA           France
+7228       DEU          Germany
+9009       HUN          Hungary
+9906       ISL          Iceland
+10777      IRL          Ireland
+11669      ITA            Italy
+12566      JPN            Japan
+14346      LUX       Luxembourg
+15242      MEX           Mexico
+15957      NLD      Netherlands
+16867      NZL      New Zealand
+18648      POL           Poland
+19545      PRT         Portugal
+20429      SVK  Slovak Republic
+21287      ESP            Spain
+22171      SWE           Sweden
+23978      TUR           Turkey
+24641      GBR   United Kingdom
+27746      CHL            Chile
+28682      EST          Estonia
+31567      SVN         Slovenia
+36648      LVA           Latvia
+40640      LTU        Lithuania
+

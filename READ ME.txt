@@ -1,3 +1,5 @@
+You can download the whole projet on your computer with the "Whole Project.zip" file (ready-to-use)
+
 ###################################################################################################################
 1. Purpose and Goal
 
@@ -28,7 +30,7 @@ The raw data is stored in the two CSV files:
 - "Residential Property Price Indices  - OECD 2018.csv"
 - "Economic outlook - OECD Nov 2018.csv"
 
-Sources of raw data :
+Sources of raw data:
 Residential Property Price Indices :  https://stats.oecd.org/viewhtml.aspx?datasetcode=RPPI&lang=en     
 Macroeconomic variables dataset : https://stats.oecd.org/viewhtml.aspx?datasetcode=EO104_INTERNET&lang=en
 
@@ -45,12 +47,7 @@ Two CSV files are also created "C:\Users\admin\Desktop\ESSEC\T4\Python programmi
 "Studied_indicators.csv" which will be usefull to link a variable or country code-name with its full name 
 (for instance "AUT"-->"Austria")
 
-
-###################################################################################################################
-4. Analysing data
-The predicit
-
-
+Studied countries:
 LOCATION    Country
 AUT         Austria
 BEL         Belgium
@@ -80,4 +77,9 @@ EST         Estonia
 SVN         Slovenia
 LVA         Latvia
 LTU         Lithuania
+
+
+###################################################################################################################
+4. Analysing data ("SciKit analysis.py")
+The prediction is based on 1-factor or MultiFactor Linear Regression using SciKit
 

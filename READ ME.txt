@@ -1,44 +1,74 @@
-Sources :
+###################################################################################################################
+1. Purpose
+
+The purpose of this project is to predict the Residential Property Price Index for 2019 in a given country. Thus we would be able to anticipate if the Residentatial Property prices are going to raise, sink or reamin flat next year.
+
+We use data from OECD:
+      - Property prices between 2010 and 2017
+      - Several macro-economical indices (as listed below in table) between ~2005 and 2019
+
+Studied macro-economical values:
+ VARIABLE     Variable
+     GDPV     Gross domestic product, volume, market prices
+      IHV     Gross fixed capital formation, housing, volume
+ET_ANNPCT     Total employment, growth
+      CPI     Consumer price index
+      UNR     Unemployment rate
+      IRL     Long-term interest rate on government bonds
+ GDPV_CAP     Gross domestic product per capita, volume
+
+If we observe a correlation between macro-economical indices and Property Price Index before 2017, we can predict Property Price Index using the OECD anticipated values for 2019 of the relevant macro-economical factors.
+
+###################################################################################################################
+2. DATA
+
+The raw data is stored in the two CSV files:
+- Residential Property Price Indices  - OECD 2018.csv
+- Economic outlook - OECD Nov 2018.csv
+
+Sources of raw data :
 Residential Property Price Indices :  https://stats.oecd.org/viewhtml.aspx?datasetcode=RPPI&lang=en     
-Macroeconomic variables: https://stats.oecd.org/viewhtml.aspx?datasetcode=EO104_INTERNET&lang=en
+Macroeconomic variables dataset : https://stats.oecd.org/viewhtml.aspx?datasetcode=EO104_INTERNET&lang=en
 
-VARIABLE    Variable
-GDPV    Gross domestic product, volume, market prices
-IHV     Gross fixed capital formation, housing, volume
-ET_ANNPCT      Total employment, growth
-CPI     Consumer price index
-UNR     Unemployment rate
-IRL     Long-term interest rate on government bonds
-GDPV_CAP       Gross domestic product per capita, volume
+###################################################################################################################
+3. Cleaning data
+
+The first step is to clean the data and make it ready-to-use for Sci-Kit analyses. For instance : some countries use a specific Residential Property Index, for example "RPPI - Stock of existing residential dwellings" instead of "RPPI - Sales of newly-built and existing dwellings". These countries will not be studied.
+
+This data cleaning is the purpose of the file "Pandas analysis.py" which filters the undesired data and stores the relevant data in a dictionnary (saved in the file with the name "DATA.npy").
+Two CSV files are also created "C:\Users\admin\Desktop\ESSEC\T4\Python programming\Projet\Very Final Project\Studied_countries.csv" and "Studied_indicators.csv" which will be usefull to link a variable or country code-name with its full name (for instance "AUT"-->"Austria")
 
 
-      LOCATION          Country
-897        AUT          Austria
-1794       BEL          Belgium
-3601       CZE   Czech Republic
-4498       DNK          Denmark
-5408       FIN          Finland
-6318       FRA           France
-7228       DEU          Germany
-9009       HUN          Hungary
-9906       ISL          Iceland
-10777      IRL          Ireland
-11669      ITA            Italy
-12566      JPN            Japan
-14346      LUX       Luxembourg
-15242      MEX           Mexico
-15957      NLD      Netherlands
-16867      NZL      New Zealand
-18648      POL           Poland
-19545      PRT         Portugal
-20429      SVK  Slovak Republic
-21287      ESP            Spain
-22171      SWE           Sweden
-23978      TUR           Turkey
-24641      GBR   United Kingdom
-27746      CHL            Chile
-28682      EST          Estonia
-31567      SVN         Slovenia
-36648      LVA           Latvia
-40640      LTU        Lithuania
+
+
+
+LOCATION    Country
+AUT         Austria
+BEL         Belgium
+CZE         Czech Republic
+DNK         Denmark
+FIN         Finland
+FRA         France
+DEU         Germany
+HUN         Hungary
+ISL         Iceland
+IRL         Ireland
+ITA         Italy
+JPN         Japan
+LUX         Luxembourg
+MEX         Mexico
+NLD         Netherlands
+NZL         New Zealand
+POL         Poland
+PRT         Portugal
+SVK         Slovak Republic
+ESP         Spain
+SWE         Sweden
+TUR         Turkey
+GBR         United Kingdom
+CHL         Chile
+EST         Estonia
+SVN         Slovenia
+LVA         Latvia
+LTU         Lithuania
 

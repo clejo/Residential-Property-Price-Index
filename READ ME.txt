@@ -83,7 +83,7 @@ LTU         Lithuania
 ###################################################################################################################
 4. Analysing data ("SciKit analysis.py")
 The prediction is based on 1-factor or MultiFactor Linear Regression using SciKit-Learn.
-The user will be able to choose the parameters of the Linear Regression with the Python module Flask and the 
-"templates\result.html" and "static\style.css" files.
+By running the "SciKit analysis.py" code, the user will be able to choose the parameters of the Linear Regression through a 
+web browser-based UI, with the Python module Flask and the "templates\result.html" and "static\style.css" files.
 
 

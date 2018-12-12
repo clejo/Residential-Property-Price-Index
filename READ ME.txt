@@ -1,4 +1,6 @@
-You can download the whole projet on your computer with the "Whole Project.zip" file (ready-to-use)
+You can download the whole projet on your computer with the "Whole Project.zip" file (ready-to-use).
+To test and use, unzip the folder and run the "SciKit analysis.py" code, which will interact with you
+through a web browser-based user interface.
 
 ###################################################################################################################
 1. Purpose and Goal
@@ -78,8 +80,10 @@ SVN         Slovenia
 LVA         Latvia
 LTU         Lithuania
 
-
 ###################################################################################################################
 4. Analysing data ("SciKit analysis.py")
-The prediction is based on 1-factor or MultiFactor Linear Regression using SciKit
+The prediction is based on 1-factor or MultiFactor Linear Regression using SciKit-Learn.
+The user will be able to choose the parameters of the Linear Regression with the Python module Flask and the 
+"templates\result.html" and "static\style.css" files.
+
 

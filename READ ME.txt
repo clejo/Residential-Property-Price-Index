@@ -1,7 +1,8 @@
 ###################################################################################################################
-1. Purpose
+1. Purpose and Goal
 
-The purpose of this project is to predict the Residential Property Price Index for 2019 in a given country. Thus we would be able to anticipate if the Residentatial Property prices are going to raise, sink or reamin flat next year.
+The purpose of this project is to predict the Residential Property Price Index for 2019 in a given country.
+Thus we would be able to anticipate if the Residentatial Property prices are going to raise, sink or reamin flat next year.
 
 We use data from OECD:
       - Property prices between 2010 and 2017
@@ -17,29 +18,37 @@ ET_ANNPCT     Total employment, growth
       IRL     Long-term interest rate on government bonds
  GDPV_CAP     Gross domestic product per capita, volume
 
-If we observe a correlation between macro-economical indices and Property Price Index before 2017, we can predict Property Price Index using the OECD anticipated values for 2019 of the relevant macro-economical factors.
+If we observe a correlation between macro-economical indices and Property Price Index before 2017, 
+we can predict Property Price Index using the OECD anticipated values for 2019 of the relevant macro-economical factors.
 
 ###################################################################################################################
 2. DATA
 
 The raw data is stored in the two CSV files:
-- Residential Property Price Indices  - OECD 2018.csv
-- Economic outlook - OECD Nov 2018.csv
+- "Residential Property Price Indices  - OECD 2018.csv"
+- "Economic outlook - OECD Nov 2018.csv"
 
 Sources of raw data :
 Residential Property Price Indices :  https://stats.oecd.org/viewhtml.aspx?datasetcode=RPPI&lang=en     
 Macroeconomic variables dataset : https://stats.oecd.org/viewhtml.aspx?datasetcode=EO104_INTERNET&lang=en
 
 ###################################################################################################################
-3. Cleaning data
+3. Cleaning data ("Pandas analysis.py")
 
-The first step is to clean the data and make it ready-to-use for Sci-Kit analyses. For instance : some countries use a specific Residential Property Index, for example "RPPI - Stock of existing residential dwellings" instead of "RPPI - Sales of newly-built and existing dwellings". These countries will not be studied.
+The first step is to clean the data and make it ready-to-use for Sci-Kit analyses. For instance : some countries use a specific 
+Residential Property Index, for example "RPPI - Stock of existing residential dwellings" instead 
+of "RPPI - Sales of newly-built and existing dwellings". These countries will not be studied.
 
-This data cleaning is the purpose of the file "Pandas analysis.py" which filters the undesired data and stores the relevant data in a dictionnary (saved in the file with the name "DATA.npy").
-Two CSV files are also created "C:\Users\admin\Desktop\ESSEC\T4\Python programming\Projet\Very Final Project\Studied_countries.csv" and "Studied_indicators.csv" which will be usefull to link a variable or country code-name with its full name (for instance "AUT"-->"Austria")
+This data cleaning is the purpose of the file "Pandas analysis.py" which filters the undesired data and 
+stores the relevant data in a dictionnary (saved in the file with the name "DATA.npy").
+Two CSV files are also created "C:\Users\admin\Desktop\ESSEC\T4\Python programming\Projet\Very Final Project\Studied_countries.csv" and
+"Studied_indicators.csv" which will be usefull to link a variable or country code-name with its full name 
+(for instance "AUT"-->"Austria")
 
 
-
+###################################################################################################################
+4. Analysing data
+The predicit
 
 
 LOCATION    Country

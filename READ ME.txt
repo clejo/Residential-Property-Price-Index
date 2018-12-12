@@ -83,7 +83,7 @@ LTU         Lithuania
 ###################################################################################################################
 4. Analysing data ("SciKit analysis.py")
 The prediction is based on 1-factor or MultiFactor Linear Regression using SciKit-Learn.
-By running the "SciKit analysis.py" code, the user will be able to choose the parameters of the Linear Regression through a 
+By running the "SciKit analysis.py" code, the user will be able to choose the variables of the Linear Regression through a 
 web browser-based UI, with the Python module Flask and the "templates\result.html" and "static\style.css" files.
 
 In case the user chooses a 1-Factor Linear Regression, the program returns the parameters of the regression and a prediction of the
@@ -91,7 +91,5 @@ Residential Property Price Index for 2019, and displays a 2D-plot with the histo
 In case the user chooses a Multi Factor Linear Regression, the program returns the parameters of the regression and a prediction of
 the Residential Property Price Index for 2019.
 
-In more detail :
-The function dataAnalysis()
 
 
